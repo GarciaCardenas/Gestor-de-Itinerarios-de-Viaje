@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dcdd0fad-a94c-4810-8acc-5f108d3b18c3",
+    "Nombre_Usuario": "agarcia",
+    "Nombre": "Angel",
+    "Apellido": "García",
+    "Correo": "agarciac1800@gmail.com",
+    "Contrasena": "agarcia1234",
+    "Fecha_Naciemiento": "2003-04-03",
+    "Genero": "H",
+    "NumTel": "5535702590",
+    "Contac_Emerg": "5535702590",
+    "Id_Ubicacion": 12345678910,
+    "Estado_cuenta": "Y",
+    "Fecha_Registro": "2003-07-05"
+  },
+  {
+    "id": "dcdd0fbc-a94c-4810-8acc-5f108d3b18c3",
+    "Nombre_Usuario": "Angel 2",
+    "Nombre": "Angel",
+    "Apellido": "García",
+    "Correo": "agarciac2400@gmail.com",
+    "Contrasena": "9876655332",
+    "Fecha_Naciemiento": "2003-04-03",
+    "Genero": "H",
+    "NumTel": "5533221144",
+    "Contac_Emerg": "5533221144",
+    "Id_Ubicacion": 12345678910,
+    "Estado_cuenta": "Y",
+    "Fecha_Registro": "2003-07-05"
+  }
+]

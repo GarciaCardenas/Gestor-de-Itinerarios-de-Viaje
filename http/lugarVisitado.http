@@ -1,0 +1,50 @@
+### Obtener todos los lugares visitados de un usuario
+POST http://localhost:1234/api/lugarVisitado/obtenerLugaresVisitados
+Content-Type: application/json
+
+{   
+    "idTurista": "1"
+}
+
+### Obtener lugar visitado por ID
+GET http://localhost:1234/api/lugarVisitado/1
+
+### Obtener lugar visitado por ID del lugar
+POST http://localhost:1234/api/lugarVisitado/obtenerLugarVisitadoIdlugar
+Content-Type: application/json
+
+{   
+    "id_Lugar": "ChIJ11_XBkz50YURyQoZon1W4T8",
+    "id_Turista": "1"
+}
+
+
+### Crear lugar visitado de prueba 1: ESCOM
+POST http://localhost:1234/api/lugarVisitado/crearLugarVisitado
+Content-Type: application/json
+
+{   
+    "id_Lugar": "ChIJ11_XBkz50YURyQoZon1W4T8",
+    "Nombre": "ESCOM - Escuela Superior de Cómputo - IPN",
+    "id_Turista": "1"
+}
+
+### Crear lugar visitado de prueba 2: Cecyt13
+POST http://localhost:1234/api/lugarVisitado/crearLugarVisitado
+Content-Type: application/json
+
+{   
+    "id_Lugar": "ChIJwUqiTCf-0YURelo2pZAozTo",
+    "Nombre": "Centro de Estudios Científicos y Tecnológicos N° 13 'Ricardo Flores Magón' IPN",
+    "id_Turista": "1"
+}
+
+
+### Eliminar lugar visitado
+POST http://localhost:1234/api/lugarVisitado/eliminarLugarVisitado
+Content-Type: application/json
+
+{   
+    "id_Lugar": "ChIJ11_XBkz50YURyQoZon1W4T8",
+    "id_Turista": "1"
+}

@@ -1,0 +1,45 @@
+### Obtener todos los lugares almacenados
+POST https://tourtales.3.us-1.fl0.io/api/itinerario/obtenerItinerarios
+Content-Type: application/json
+
+{   
+    "id_Turista": "1"
+}
+
+### Obtener lugar por ID
+GET https://tourtales.3.us-1.fl0.io/api/itinerario/5
+
+### Crear itinerario de prueba 1: Viaje por el IPN
+POST https://tourtales.3.us-1.fl0.io//api/itinerario/crearItinerario
+Content-Type: application/json
+
+{   
+    "id_Turista": "1",
+    "Nombre": "Viaje por el IPN"
+}
+
+### Crear itinerario de prueba 2: Viaje por la UNAM
+POST https://tourtales.3.us-1.fl0.io//api/itinerario/crearItinerario
+Content-Type: application/json
+
+{   
+    "id_Turista": "1",
+    "Nombre": "Viaje por la UAM"
+}
+
+### Eliminar Itinerario
+POST https://tourtales.3.us-1.fl0.io//api/itinerario/eliminarItinerario
+Content-Type: application/json
+
+{   
+    "id_Itinerario": "1"
+}
+
+### Editar Estado Itinerario
+POST https://tourtales.3.us-1.fl0.io//api/itinerario/editarEstadoItinerario
+Content-Type: application/json
+
+{   
+    "id_Itinerario": 3,
+    "Estado": "C"
+}

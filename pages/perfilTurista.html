@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de datos de la empresa</title>
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/styles_perfil.css">
+    <script src="ARCY-PRUEBAS/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="navbar" >
+            <span id="openBtn" class="btn-icon" onclick="openNav()">&#9776;</span>
+
+            <img src="assets/icons/Logo.PNG" class="img-nav" alt="Logo" id="logoImage">
+        </div>
+        
+        <div class="page-title">
+            <h2 class="h1-title">Configuración de Cuenta</h2>
+        </div>
+
+        <div class="container-modal-sidebar" id="modalSidebar">
+            <div id="sidebar" class="sidebar">
+                <div class="user">
+                    <p>Hola, </p><b id="nombreUsuario"> NOMBRE </b> 
+                </div>
+                <div class="sidebar-text">
+                    <a href="/aventuras_proximas" class="btn-sidebar"> 
+                        <img src="./assets/icons/itinerarioIcono.png" class="sidebar-img"> Aventuras 
+                    </a>
+                    <a href="/MisFavoritos" class="btn-sidebar"> 
+                        <img src="assets/icons/favoritosBlancoRosa.png" class="sidebar-img"> Lugares favoritos 
+                    </a>
+
+                </div>
+
+                <div class="sidebar-text" style="margin-top: auto;">
+                    <a href="/perfilTurista" class="btn-sidebar"> 
+                        <img src="assets/icons/engraneIcon.png" class="sidebar-img"> Cuenta 
+                    </a>
+                    <a href="/FormularioQuejas" class="btn-sidebar"> 
+                        <img src="assets/icons/Bandera.png" class="sidebar-img" style="border-radius: 0;"> Enviar comentarios <br>de la aplicación
+                    </a>
+                    <a href="#" class="btn-sidebar" id="cerrarSesion"> 
+                        <img src="assets/icons/cerrarIcono.png" class="sidebar-img"> Cerrar Sesión 
+                    </a>
+                </div>
+                <button type="button" id="closeBtn" class="closeBtn btn-icon" onclick="closeNav()">&times;</a>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="container-data">
+            <div class="userH">
+                <p id="name"></p>
+                <p id="type">Turista</p>
+            </div>
+            <!--<form id="updateEmail" class="form-profile" novalidate>
+                <label for="email" class="label-profile">Correo electrónico</label><br>
+                <div class="container-input" id="contInputEmail">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" class="input-profile" required disabled>
+                    <button type="button" class="btn-icon" id="editEmail">
+                        <img src="/assets/icons/editarIcono.png" style="width:24px; height:24px;" >
+                    </button>
+                </div>
+            </form>-->
+            <form id="updatePassword" class="form-profile" novalidate>
+                <label for="password" class="label-profile" id="labelPassword">Contraseña</label><br>
+                <div class="container-input" id="contInputPassword">
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Nueva contraseña" class="input-profile" required disabled>
+                        <img src="/assets/icons/Boton ojoA.svg" alt="Mostrar contraseña" id="togglePassword">
+                    </div>
+                    <button type="button" class="btn-icon" id="editPassword">
+                        <img src="/assets/icons/editarIcono.png" style="width:24px; height:24px;">
+                    </button>
+                </div>
+                <!--
+                <label for="passwordRE" class="label-profile">Confirmar Contraseña</label><br>
+                <div class="container-input" id="contInputPassword">
+                    <div class="password-container" style="margin-right: 32px;">
+                        <input type="password" id="passwordRE" name="passwordRE" placeholder="Contraseña" class="input-profile" required disabled>
+                        <img src="/assets/icons/Boton ojoA.svg" alt="Mostrar contraseña" id="togglePassword">
+                    </div>
+                    
+                </div>
+
+                <label for="currentPassword" class="label-profile" id="labelCurrentPassword">Contraseña actual</label><br id="brCP">
+                            <div class="container-input" id="contCurrentInputPassword" style="margin-bottom:0.1rem">
+                                <div class="password-container" style="margin-right: 32px;">
+                                    <input type="password" id="currentPassword" name="currentPassword" placeholder="Contraseña actual" class="input-profile" required>
+                                    <img src="/assets/icons/Boton ojoA.svg" alt="Mostrar contraseña" id="toggleCurrentPassword">
+                                </div>
+                                
+                            </div>
+
+                <div class="btn-form-profile" id="buttomsPassword">
+                    <button type="button" class="btn-cancel" id="cancelUpdatePassword">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-save" id="doUpdatePassword">
+                        Aceptar
+                    </button>
+                </div>-->
+            </form>
+            <div class="container-delete">
+                <button type="button" class="btn-deleteAcc" id="btnDeleteAccount">
+                    <h3 style="margin: 0;">Borrar cuenta</h3>
+                    <img src="/assets/icons/basureroIcon.png" width="32px" height="32px">
+                </button>
+                <!-- Ventana modal -->
+                <div class="container-modal" id="cModalAlertDelete">
+                    <!--<div class="content-modal">
+                        <h2 style="text-align: center;">¿Estas seguro?</h2>
+                        <p style="margin: 0 0 20px 0; text-align: center;">Esta accion borrará todos los datos de tu cuenta</p>
+                        <div class="btn-form-profile" style="display: flex !important;">
+                            <button type="button" class="btn-cancel" id="btnDeleteAccountConfirmed">
+                                <b>Estoy seguro</b>
+                            </button>
+                            <button type="submit" class="btn-save" id="btnClose">
+                                <b>Regresar</b>
+                            </button>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </main>
+
+    <script type="module" src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/map.js"></script>
+    <script src="/js/cambiar_datos.js"></script>
+    <script type="module" src="/js/Hide.js"></script>
+</body>
+</html>

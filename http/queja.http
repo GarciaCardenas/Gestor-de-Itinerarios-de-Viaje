@@ -1,0 +1,37 @@
+### Obtener todos las quejas de un usuario
+POST http://localhost:1234/api/queja/obtenerQuejas
+Content-Type: application/json
+
+{   
+    "idTurista": "1"
+}
+
+### Obtener queja por ID
+POST http://localhost:1234/api/queja/obtenerQuejaPorId
+Content-Type: application/json
+
+{   
+    "id_Turista": "1",
+    "id_Queja": "1"
+}
+
+
+### Crear queja de prueba 1: ESCOM
+POST http://localhost:1234/api/queja/crearQueja
+Content-Type: application/json
+
+{   
+    "id_Turista": "1",
+    "categoria": "Lugares",
+    "comentario": "No aparece mi casa en el mapa"
+}
+
+### Crear queja de prueba 2: Cecyt13
+POST http://localhost:1234/api/queja/crearQueja
+Content-Type: application/json
+
+{   
+    "id_Turista": "1",
+    "categoria": "Sistema",
+    "comentario": "Se traba la aplicación al seleccionar un lugar como visitado"
+}
